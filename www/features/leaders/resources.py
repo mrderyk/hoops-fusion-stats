@@ -17,5 +17,6 @@ class LeagueLeadersRegular(Resource):
     serialized = compile_leaders_and_player_data(leader_data, player_data)
 
     return jsonify({
+      'leaderboard_type': 'regular',
       'leaders': serialized
     })
