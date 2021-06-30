@@ -1,3 +1,3 @@
 APP_NAME = 'Hoops Fusion'
 SERVICE_NAME = 'Leaders'
-SERVICE_VERSION = '1.0'
+SERVICE_VERSION = '0.0.2'

@@ -8,7 +8,6 @@ def compile_leaders_and_player_data(leader_data=[], player_data=[]):
       'stat': pks['stat']
     } for pks in player_keys_and_stats]
 
-    print(serialized_leaders_for_category)
     serialized.append({
       'category': l.category,
       'leaders': serialized_leaders_for_category
@@ -23,14 +22,3 @@ def create_player_lookup_table(player_data=[]):
     lookup_table[p.key] = p.serialize()
 
   return lookup_table
-
-  """
-  [
-    category: 'ptspg'
-    leaders: [{
-      player: {...}
-      stat: 32.0
-    }]
-  ]
-  
-  """
