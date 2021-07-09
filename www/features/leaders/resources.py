@@ -26,8 +26,12 @@ class LeagueLeaderComparisonRegular(Resource):
     season = request.args.get('season')
     category = request.args.get('category')
 
-    comparison_stat_model = get_regular_season_stat_by_player_key_and_category(player_key, category, season)[0]
-    comparison_stat_value = getattr(comparison_stat_model, category)
+    comparison_stat_models = get_regular_season_stat_by_player_key_and_category(player_key, category, season)
+    if len(comparison_stat_models) == 0:
+      comparison_stat_value = 0
+    else:
+      comparison_stat_model = comparison_stat_models[0]
+      comparison_stat_value = getattr(comparison_stat_model, category)
 
     player_data = get_player_data([player_key])[0]
 
