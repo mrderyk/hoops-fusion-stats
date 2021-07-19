@@ -3,7 +3,7 @@ click==8.0.1
 Flask==2.0.1
 Flask-RESTful==0.3.9
 gunicorn==20.1.0
--e git+https://github.com/mrderyk/hfdb.git@bce4e15a7d864433bf7b203217bfc716c3259027#egg=hfdb
+-e git+https://github.com/mrderyk/hfdb.git@4905381afb14eeb183112308a21f8b9600fc926f#egg=hfdb
 itsdangerous==2.0.1
 Jinja2==3.0.1
 MarkupSafe==2.0.1
